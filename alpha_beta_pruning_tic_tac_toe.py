@@ -83,8 +83,8 @@ class abp:
       elif depth == 0:
           return [None, None, 0]
 
-      #if current player is maximing best_score is set to -infity
-      #if current player is minizing best_Score is set to inifity 
+      #if current player is maximing, best_score is set to -infinity
+      #if current player is minizing, best_score is set to infinity 
       best_score = alpha if player == 1 else beta
       best_row = None
       best_col = None
@@ -141,7 +141,7 @@ class abp:
             if (abp.checkingForWinner(board,-1) or abp.checkingForWinner(board,1)) is True:
                 break
         #printing the winner or draw
-        print('X wins ' if abp.checkingForWinner(board, 1) else 'O wins ' if abp.checkingForWinner(board, -1) else 'Draw')
+        print('You Win' if abp.checkingForWinner(board, 1) else 'Bot Wins' if abp.checkingForWinner(board, -1) else 'Draw')
 #end of the class
 
 #calling the function in the class to run the code
